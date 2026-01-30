@@ -9,3 +9,6 @@ llm = ChatGroq(
 
 response = llm.invoke("What is the capital of India?")
 print(response.content)
+
+#The above given code is in a static format  to run it dynamcially we use prompttemplate
+
