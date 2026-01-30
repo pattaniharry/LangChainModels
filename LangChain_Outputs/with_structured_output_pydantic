@@ -1,0 +1,14 @@
+from pydantic import BaseModel
+from typing import List, Optional
+
+class Student(BaseModel):
+
+    name:str
+    age: Optional[int] = None
+
+
+new_student  = {'name' : 'Harry' }
+
+student = Student(**new_student)
+
+print (student)
