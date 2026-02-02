@@ -1,6 +1,7 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate ,PromptTemplate
 from dotenv import load_dotenv
+from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()
 
@@ -27,11 +28,11 @@ template2 = PromptTemplate (
     input_variables = ["text"]
 )
 
+parser = StrOutputParser()
 
-prompt1 = template1.invoke({"topic": "Black Hole"})
 
-prompt2 = template2.invoke({"text": prompt1})
-response = llm.invoke(prompt2)
+chain = template1 | llm | parser | template2 | llm | parser
 
-print(response.content)
+result = chain.invoke({"topic": "Black Hole"})
 
+print (result)
