@@ -19,3 +19,12 @@ Parallel Chain
 
 from a give input by user lets say we want to build some notes and quiz so that will 
 work parallel 
+
+
+Conditional Chain 
+
+user will give you feedback the we(bot / Developer ) has to analyze whether that feedback is 
+positive or negatie and then continue forward with the chain 
+
+
+With the help of RunnableBranch we could run Conditional statements 

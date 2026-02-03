@@ -43,3 +43,5 @@ chain = parallel_chain | merge_chain
 result = chain.invoke({'text': "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll. It involves the conversion of carbon dioxide and water into glucose and oxygen. This process is essential for the survival of life on Earth as it provides oxygen for respiration and organic compounds for food."})
 
 print (result)
+
+chain.get_graph().print_ascii()
