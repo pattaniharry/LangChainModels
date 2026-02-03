@@ -9,3 +9,13 @@ In Chains you would just have to give input to pipelines as you give that the pi
 
 We can even create conditional chains using chain feature of LangChain
 
+
+
+Sequential Chain 
+
+Topic -> LLM -> detailed report -> LLM -> summary  
+
+Parallel Chain 
+
+from a give input by user lets say we want to build some notes and quiz so that will 
+work parallel 
