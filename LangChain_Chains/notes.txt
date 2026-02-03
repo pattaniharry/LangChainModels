@@ -1,0 +1,11 @@
+
+LangChain chains helps us create pipelines for the data to flow from template to template to user 
+
+
+without chain all the commands to the parser to each template will be done manually 
+
+
+In Chains you would just have to give input to pipelines as you give that the pipeline will automatically trigger and do the rest and give output 
+
+We can even create conditional chains using chain feature of LangChain
+
