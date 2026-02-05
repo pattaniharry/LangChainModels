@@ -1,0 +1,23 @@
+String Output Parser
+
+a string output parser mostly used in chaining helps when we have a pipeline set and where we don't need additional information to go on to the next prompt template and only 
+require the content that is outputed from the predecessor prompt 
+
+without string output parser result is possible but we had to extract content from each prompt template each time  parser will do the hard work while chaining 
+
+
+
+JSON OUTPUT PARSER  
+
+It forces llm to give output in json format 
+when using json output parser you will get an json formatted output but you cannot decide the schema of the output , that will be decided by the parser itself 
+
+for structureing of output parser we use JSON SCHEMA OUTPUT PARSER or PYDANTIC OUTPUT PARSER  
+
+
+PYDANTIC OUTPUT PARSER 
+Strict schema enforcement 
+Type safety 
+Easy Validation 
+Seamless integration 
+

@@ -1,0 +1,16 @@
+What are Runnables ?
+
+Consider them as a unit of work every runnable in langchain has a purpose
+
+you can give input the runnable processes it and give you output 
+
+every runnable follow a common interface 
+    1. very popular method is invoke()
+    2. Batch - using this a runnable could process multiple 
+    input and give multiple outputs 
+    3. Stream() for streaming output 
+
+
+as this runnable are made from common interface so you could connect
+this runnable easily and execute any complex workflow 
+

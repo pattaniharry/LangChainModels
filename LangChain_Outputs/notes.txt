@@ -1,0 +1,64 @@
+Getting Output from LLM's 
+
+you give input there is processing in input and then there is output that is in text format 
+
+so that output text is in unstructured format you can do the following things to make it structured 
+
+WHY DO WE NEED STRUCTURED OUTPUT ??
+
+1.Makes llm response machine readable 
+2. eliminate fragile text parsing 
+3. Reduces hallucination related bug 
+4. Enables automation 
+
+
+
+with_structured_output is a function that is used to bring out sturucted output from llms that can produce structured output (some llms' can't produce structured otuput )
+
+you have to define with_structued_output(your output requirement format ) before doing model.invoke 
+
+
+3 ways to do dataformat 
+
+1. type dictionaries
+
+
+2. pydantic
+
+pydantic have type safety unlike typedict which defines but does not validate 
+pydantic also validates and gives error incase of type differnece 
+
+there are field functions that helps create constraints , regex ,default values , and descriptions 
+
+cna be converted to dict or json 
+
+3. json schema 
+
+what to use when ?
+
+use type dict when you can use python on the whole project 
+and schema is not being shared with anyother language 
+
+use pydantic if you need data validation need default values and want automatic type conversion 
+
+use json schema  if you don't want to export any other extra python libraries 
+need validation but don't need pyhton objects 
+want to define a structure in a standard JSON format 
+
+
+APPLICATIONS 
+its used in data extraction 
+API building 
+Agents 
+
+
+
+
+
+
+///OUTPUT PARSERS
+
+StrOutParser 
+simplest parser in langchain parsers the output of the LLM  in the form of a string 
+
+

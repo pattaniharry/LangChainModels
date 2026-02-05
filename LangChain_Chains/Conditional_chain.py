@@ -54,3 +54,5 @@ chain = classifier_chain | branch_chain
 result = chain.invoke({'text': "The product quality is excellent and I am very satisfied with my purchase!"})  
 
 print (result )
+
+chain.get_graph().print_ascii()
