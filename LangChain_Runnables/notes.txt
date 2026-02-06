@@ -14,3 +14,33 @@ every runnable follow a common interface
 as this runnable are made from common interface so you could connect
 this runnable easily and execute any complex workflow 
 
+
+Basically a standardized abstract class which has the same invoke function 
+for smooth integration is called Runables 
+
+How many Types of Runnables in LangChain 
+
+1. Task Specific Runnables 
+2. Runnable Primitives 
+
+ 
+ TASK SPECIFIC RUNNABLES 
+
+ Definition : These are core LangChain components that have been 
+ converted into Runnables so they can be used in pipelines
+ 
+ e.g - Prompt Templates , Retriver 
+
+ RUNNABLE PRIMITIVES 
+
+ Definition : these are fundamental building blocks for structuring
+ execution logic in AI workflows 
+
+e.g - Runnable Sequence , Runnable Parallel 
+
+1. Runable Sequence 
+It is a sequential chain of runnable in LangChain that executes each step
+one after another , Passing the output of one step as the input
+of the next 
+
+
