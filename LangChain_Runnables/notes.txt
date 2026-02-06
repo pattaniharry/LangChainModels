@@ -43,4 +43,17 @@ It is a sequential chain of runnable in LangChain that executes each step
 one after another , Passing the output of one step as the input
 of the next 
 
+2. Runnable Parallel
+Helps in building parallel chains 
+
+3. RunnablePassthrough 
+
+Runnable RunnablePassthrough is a special Runnable primitive that 
+simply returns the input as output without modifying it 
+
+4. Runnable Lambda 
+it is a runnable primitive that allows you to apply custom python 
+functions withtin an AI pipline 
+acting as a middle ware betwen AI components 
+
 
