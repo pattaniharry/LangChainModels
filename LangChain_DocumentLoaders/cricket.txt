@@ -1,0 +1,40 @@
+1. Cricket is a bat-and-ball sport played between two teams of eleven players.
+2. The game originated in England and is now popular worldwide.
+3. A standard cricket field is oval shaped with a rectangular pitch.
+4. Each team takes turns batting and bowling.
+5. The batting team tries to score runs.
+6. The bowling team tries to dismiss batters.
+7. A match is divided into overs.
+8. One over consists of six legal deliveries.
+9. The main formats are Test, ODI, and T20.
+10. Test matches can last up to five days.
+11. One Day Internationals are limited to fifty overs per side.
+12. T20 matches have twenty overs per team.
+13. A batsman scores runs by hitting the ball and running between wickets.
+14. Boundaries give automatic runs.
+15. Four runs are awarded if the ball reaches the rope after bouncing.
+16. Six runs are awarded if the ball clears the rope on the full.
+17. A bowler can dismiss a batsman in many ways.
+18. Common dismissals include bowled, caught, and LBW.
+19. Fielders help stop runs and take catches.
+20. The wicketkeeper stands behind the stumps.
+21. The captain makes strategic decisions on the field.
+22. Umpires enforce the rules of the game.
+23. The ICC governs international cricket.
+24. Major tournaments attract millions of viewers.
+25. Pitch conditions affect batting and bowling.
+26. Swing bowling depends on air movement.
+27. Spin bowling relies on surface grip.
+28. Fast bowlers focus on speed and bounce.
+29. All-rounders contribute with both bat and ball.
+30. Opening batsmen face the new ball.
+31. Middle-order batsmen stabilize the innings.
+32. Finishers score quickly at the end.
+33. Powerplays restrict field placements.
+34. Partnerships are important for building totals.
+35. Defensive shots protect the wicket.
+36. Aggressive shots increase scoring rate.
+37. Fitness plays a key role in modern cricket.
+38. Technology assists umpiring decisions.
+39. Data analytics is used for match strategy.
+40. Cricket combines skill, patience, and teamwork.
