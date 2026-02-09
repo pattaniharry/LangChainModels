@@ -1,0 +1,19 @@
+Introduction Artificial Intelligence has become one of the most influential technologies of the modern era. From recommendation systems on streaming platforms to fraud detection in banking, AI is shaping how we interact with digital systems every day. Machine learning, a subset of AI, allows computers to learn patterns from data instead of being explicitly programmed.
+Deep learning takes this idea further by using neural networks with many layers. These models are capable of understanding images, speech, and natural language with remarkable accuracy.
+Section 1: Machine Learning BasicsMachine learning works by feeding large amounts of data into an algorithm. The algorithm analyzes patterns and relationships in the data and builds a model. This model can then make predictions on new, unseen data.
+There are three major types of machine learning: supervised learning, unsupervised learning, and reinforcement learning.
+In supervised learning, the model is trained using labeled data. For example, a spam detection system learns from emails that are already marked as spam or not spam.
+Unsupervised learning works with unlabeled data. The model tries to discover hidden structures, such as grouping customers based on behavior.
+Reinforcement learning teaches an agent through rewards and penalties. It is commonly used in robotics and game-playing systems.
+Section 2: Natural Language ProcessingNatural Language Processing, or NLP, focuses on enabling computers to understand human language. Tasks include sentiment analysis, machine translation, summarization, and question answering.
+Text preprocessing is an important step in NLP. It includes removing punctuation, converting text to lowercase, tokenization, and lemmatization.
+Modern NLP systems often use large language models that are trained on billions of words. These models learn grammar, facts, and reasoning patterns from data.
+Section 3: Why Text Splitting MattersLarge documents cannot be directly fed into most language models because of token limits. Therefore, documents are divided into smaller pieces called chunks.
+Text splitting improves retrieval accuracy in RAG systems. Smaller chunks help embeddings capture more precise meaning. Overlapping chunks help preserve context between sections.
+Different splitting strategies exist. Some split by characters, others by sentences or paragraphs. More advanced approaches use semantic boundaries.
+Choosing the right chunk size is critical. Very small chunks lose context, while very large chunks may exceed model limits.
+Section 4: Real World ExampleImagine you have a 200-page PDF manual. If you embed the entire document as one block, searching becomes inefficient. Instead, splitting the text into smaller sections allows each part to be indexed separately.
+When a user asks a question, only the relevant chunks are retrieved. This makes responses faster and more accurate.
+This technique is widely used in chatbots, documentation assistants, and knowledge-base systems.
+ConclusionText splitting is a foundational concept in modern AI pipelines. Whether you are building search engines, chatbots, or RAG applications, understanding how to chunk text effectively will greatly improve system performance.
+Experimenting with different chunk sizes and overlaps will help you discover what works best for your use case.

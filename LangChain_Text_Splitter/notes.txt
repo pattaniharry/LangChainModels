@@ -1,0 +1,21 @@
+Text splitting is the process of breaking large chunks of Text
+into smaller manageable pieces that an LLM can handle effectively
+
+What is the use of Text Splitter
+
+any given LLM has a context length so the whole context is blurred
+or lost when the token size of context length exceeds 
+
+text splitting is also useful and neccessary in Semantic Search, Summarization
+, embedding 
+
+
+
+Types of text splitter 
+
+Length Based 
+Text Structure Based 
+Document Structure Based 
+Semantic Meaning Based 
+
+

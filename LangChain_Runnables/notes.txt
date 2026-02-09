@@ -56,4 +56,13 @@ it is a runnable primitive that allows you to apply custom python
 functions withtin an AI pipline 
 acting as a middle ware betwen AI components 
 
+5. RunnableBranch 
+
+it is a control flow component in LangChain that allows you to conditionally 
+route input data to different chains or runnables based on custom 
+logic 
+
+6. LCEL
+langchain expression language 
+e.g ("|") symbol for chains 
 

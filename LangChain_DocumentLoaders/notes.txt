@@ -1,5 +1,7 @@
 text loader 
 
+every loader has a function foir lazy_load()
+
 helps in getting external document for our chat model
 
 pyPDFLoader 
@@ -7,4 +9,30 @@ it is a document loader in LangChain used to load content from pdf
 files and convert each page into a Document object
 uses pyPDF library under the hood , not great with complex layout 
 or scanned copies 
+
+there are other pdf loader also available in langchain 
+pyPDFLoader works most better when we have the pdf consist of text data 
+for scanned iamges we use AmazonTextractPDFLoader
+
+
+DirectoryLoader
+
+for loading a whole folder with multiple files 
+we use directory loader 
+
+
+WebBaseLoader
+a documq loader in LangChain used to load and extract text 
+content form web pages 
+
+It use BeautifulSoup under the hood to parse HTML and extract 
+visible text 
+
+Doesn't handle heavy java script well 
+load only static content 
+
+CSVLoader
+csvloader is a document loader used to load CSV files into langchain document
+object one per row by default
+
 
