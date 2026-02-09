@@ -1,0 +1,10 @@
+text loader 
+
+helps in getting external document for our chat model
+
+pyPDFLoader 
+it is a document loader in LangChain used to load content from pdf 
+files and convert each page into a Document object
+uses pyPDF library under the hood , not great with complex layout 
+or scanned copies 
+
