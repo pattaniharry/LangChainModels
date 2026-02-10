@@ -16,6 +16,12 @@ Types of text splitter
 Length Based 
 Text Structure Based 
 Document Structure Based 
+
+
 Semantic Meaning Based 
 
+- take text and converts it into vectors using embedding models 
+- finds consine similiarity to find similiarities 
+- seperate them using standard deviation 
+- find similar numbers and thus have same context 
 
