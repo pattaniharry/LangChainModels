@@ -18,5 +18,24 @@ that lets you Search and fetch documents from a vector store
 nased on semantic - similarity using vector embeddings 
 
 
+ADVANCED TYPE OF RETRIVAL 
+
+1. MMR  - MAXIMUM MARGINAL RELAVANCE 
+
+MMR is an information retrival algorithm designed to reduce redundancy in the retreved 
+results while maintaining high relevance to the query 
 
 
+2. Multi - Query Retriever
+
+Multi-Query Retrieval means:
+
+ Take one user question, generate multiple reworded versions using an LLM, 
+ search the vector database with each version, and combine the results.
+
+
+3. Contextual Compression Retriever
+
+the Contextual Compression retriver in langchain is an ADVANCED retriever
+that improves retrival quality by compressing documents after retrival
+keeping only relavant contnet based on the user's query 
