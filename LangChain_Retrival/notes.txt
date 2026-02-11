@@ -1,0 +1,22 @@
+A retriever is a componenet in LangChain that fetches relevant
+documents from a data source in resoponse to user's query 
+
+There are multiple types of retrievers 
+
+1. Based on Data source 
+2. Based on Search strategy     
+
+All retrivers in LangChain are RUNNABLES
+
+coded in google collab 
+
+
+VECTOR STORE RETRIEVER
+
+A vector store retriver in LangChain is the most common type of retriever 
+that lets you Search and fetch documents from a vector store
+nased on semantic - similarity using vector embeddings 
+
+
+
+
