@@ -1,0 +1,63 @@
+RAG - Retrival Augmented Generation 
+
+RAG consists of 4 parts 
+
+1. Document Loader 
+2. Text Splitter 
+3. Vector Store 
+4. Retrivers 
+
+llm is pre trained on the whole of internet data 
+and that data is stored in form of parameters so known as parametric knowledge 
+
+there are 3 types where this llm might be not knowing answer or wrong answer given 
+
+1. On private data
+2. On recent data 
+3. when hallucinating 
+
+to solve this there is a way of FINE TUNINIG
+
+what you do on fine tuning is you take a whole model and then do a additional training 
+on  a domain specific data set 
+
+Types of fine tuning 
+1. Supervised Fine tuning  - supervised learning
+2. Continued Pre training - unsupervised learning 
+
+fine tuning is expensive if required frequnt changes 
+requires strong technical expertise
+
+
+Another Technique is In context Learning 
+
+In Context Learning is a core capability of large language model like GPT-3/4 , claude and 
+llama , where the model learns to solve a task purely by seeing examples in the 
+prompt - without updating its weights 
+
+We do few shot prompting in ICL - where we give few examples in the prompt 
+
+
+Now instead of the example we give whole context 
+
+like for a video explaination we give something like the transcript + translation  + user query 
+
+This context giving and taking answer is What is Known as Retrival Augmented Generation 
+
+RAG -Information Retrival + Text Generation 
+
+
+
+How RAG Works (Step-by-Step Pipeline)
+User asks question
+Convert question into vector (embedding)
+Search vector database for similar documents
+Retrieve top relevant chunks
+Send retrieved content + question to LLM
+LLM generates final answer using that context
+
+
+
+
+
+
