@@ -16,12 +16,20 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 
 ## step 1 indexing (document ingestion )
 
-video_id = "rtpTvvp3OZA" 
+video_id = "Gfr50f6ZBvo" 
 
 try:
     transcript_list = YouTubeTranscriptApi().fetch(video_id,languages=["en"])
-    transcript = " ".join(chunk["text"] for chunk in transcript_list)
+    transcript = " ".join(chunk.text for chunk in transcript_list)
     print(transcript)
 
 except TranscriptsDisabled:
     print("Transcripts are disabled for this video.")
+
+
+#step1 B indexing (text splitting)
+
+splitter = RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
+chunks = splitter.create_documents([transcript])
+ 
+print(chunks[0])
