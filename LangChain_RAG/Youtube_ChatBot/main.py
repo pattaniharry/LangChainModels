@@ -5,6 +5,8 @@ from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
 from langchain_text_splitters import RecursiveCharacterTextSplitter 
 from langchain_community.document_loaders import TextLoader
 from sentence_transformers import SentenceTransformer
+from langchain_community.vectorstores import FAISS
+from langchain_core.documents import Document
 
 load_dotenv()
 
@@ -21,7 +23,7 @@ video_id = "Gfr50f6ZBvo"
 try:
     transcript_list = YouTubeTranscriptApi().fetch(video_id,languages=["en"])
     transcript = " ".join(chunk.text for chunk in transcript_list)
-    print(transcript)
+    # print(transcript)
 
 except TranscriptsDisabled:
     print("Transcripts are disabled for this video.")
@@ -32,4 +34,15 @@ except TranscriptsDisabled:
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
 chunks = splitter.create_documents([transcript])
  
-print(chunks[0])
+# print(chunks[0])
+
+#ste1 c & d indexing(embedding generation and storing in vector store )
+
+
+text = [doc.page_content for doc in chunks]
+embedding = model.encode(text)
+
+text_embedding_pairs = list(zip(text, embedding))
+
+
+vector_store = FAISS.from_embeddings(text_embedding_pairs, None)
