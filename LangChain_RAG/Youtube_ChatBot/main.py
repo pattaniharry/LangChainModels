@@ -5,8 +5,9 @@ from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled
 from langchain_text_splitters import RecursiveCharacterTextSplitter 
 from langchain_community.document_loaders import TextLoader
 from sentence_transformers import SentenceTransformer
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS 
 from langchain_core.documents import Document
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
 
@@ -39,10 +40,19 @@ chunks = splitter.create_documents([transcript])
 #ste1 c & d indexing(embedding generation and storing in vector store )
 
 
-text = [doc.page_content for doc in chunks]
-embedding = model.encode(text)
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-text_embedding_pairs = list(zip(text, embedding))
+vector_store = FAISS.from_documents(chunks, embeddings)
 
 
-vector_store = FAISS.from_embeddings(text_embedding_pairs, None)
+
+
+
+### STEP2 RETRIEVAL
+
+retriever = vector_store.as_retriever(search_type = 'similarity'  , search_kwargs={"k" : 4})
+
+result = retriever.invoke("what is deepmind")
+
+print(result)
+
