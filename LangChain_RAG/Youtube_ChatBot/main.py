@@ -7,7 +7,8 @@ from langchain_community.document_loaders import TextLoader
 from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS 
 from langchain_core.documents import Document
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 
@@ -45,14 +46,41 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vector_store = FAISS.from_documents(chunks, embeddings)
 
 
-
-
-
 ### STEP2 RETRIEVAL
 
 retriever = vector_store.as_retriever(search_type = 'similarity'  , search_kwargs={"k" : 4})
 
-result = retriever.invoke("what is deepmind")
 
-print(result)
 
+
+## note : - in retriver we always give input a query and output is always a list of documents 
+## step 3    augmentation 
+# 
+
+llm = ChatGroq(
+    model = "llama-3.1-8b-instant",
+    temperature = 0
+)   
+ 
+prompt = PromptTemplate (
+    template = """You are a helpful assitant.
+                 Answer ONLY from the provided transcript context.
+                 If the answer is not explicitly stated, respond exactly: "I don't know." 
+                 
+                 {context}
+                 Question:{question}
+
+                 """,
+                 input_variables = ['context', 'question']
+)
+
+
+question = "is the topic of Blender discusssed in the video?"
+retrived_docs = retriever.invoke(question)
+
+
+context_text = "\n\n".join(doc.page_content for doc in retrived_docs)
+
+final_prompt = prompt.invoke({"context":context_text,"question":question})
+
+print(final_prompt)
