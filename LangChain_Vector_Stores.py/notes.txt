@@ -1,0 +1,11 @@
+What are Vector Stores ?
+
+A vector stroe is a system designed to store and retrieve data 
+reprsented as numerical vectors 
+
+key feature 
+1. storage
+2. memory 
+3. similarity search 
+4. indexing 
+5. CRUD operations 

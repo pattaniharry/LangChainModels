@@ -1,0 +1,16 @@
+A tool is just a python function (or API) that is 
+packaged in a way the LLM can understand and call when
+needed.
+
+LLm can do reasoning and language generation 
+but ccannot do the following 
+1. access live data 
+2. do reliable math 
+3. call APIs
+4. Run code 
+5. interact with a database 
+
+TOOLS are a mechanism through which you could make your 
+llm perform a certain task which was not possible before
+like booking a ticket for you or doing a tweet for you 
+
