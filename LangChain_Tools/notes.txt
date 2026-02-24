@@ -14,3 +14,22 @@ TOOLS are a mechanism through which you could make your
 llm perform a certain task which was not possible before
 like booking a ticket for you or doing a tweet for you 
 
+Tools are of 2 types 
+
+1. Built in tools 
+2. Custom tools - built as per requirement 
+
+How tools fit into the agent eco-system 
+
+an ai agent is an llm powered agent that can 
+autonomously think, decide and take action using 
+external tools or apis to achieve a goal
+
+builtin tool example 
+1. Shelltool - run shell commands ,
+2. GmailSendmessageTool - sends email via gmail ,
+3. SQLDatabaseQueryTool - run sql queries ,
+4. DuckDuckGoSearchRun - web search via duck duck go , etc
+
+
+
