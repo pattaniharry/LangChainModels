@@ -9,7 +9,7 @@ Original file is located at
 #Built in Tool DuckDuckGo Search
 """
 
-!pip install langchain_experimental
+
 
 from langchain_community.tools import DuckDuckGoSearchRun
 
